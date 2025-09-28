@@ -1,0 +1,25 @@
+class bank():
+  def __init__(self,accountnumber,holder,balance):
+    self.accountnumber=accountnumber
+    self.balance=balance
+    self.holder=holder
+  def withdrawal(self,amount):
+    if self.balance<=amount:
+      print("collect your cash")
+    else:
+      self.balance=self.balance-amount
+      print("remaining balance is ",self.balance)
+  def deposit(self,amount):
+    self.balance=self.balance+amount
+    print("total balance is ",self.balance)
+  def display(self):
+    print("balance is ",self.balance)
+
+
+b1=bank(123456789,"kumar",2000)
+print(b1.accountnumber)
+print(b1.balance)
+print(b1.holder)
+b1.withdrawal(1000)
+b1.deposit(500)
+b1.display()
